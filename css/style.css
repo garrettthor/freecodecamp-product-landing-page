@@ -3,13 +3,23 @@
     padding: 0;
     margin: 0;
     font-family: "Zen Kaku Gothic Antique", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: static;
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgb(223, 223, 223);
 }
 
 li {
@@ -21,6 +31,10 @@ li {
     color: rgb(59, 59, 59);
     font-size: 1.5rem;
     text-decoration: none;
+}
+
+#nav-bar {
+    line-height: 2.5rem;
 }
 
 #title-and-email {
@@ -36,20 +50,21 @@ li {
 }
 
 h1 {
+    font-family: arvo;
     font-size: 4.5rem;
     color: #fff;
     text-align: center;
     background-color: rgb(43, 43, 43);
 }
 
-#email-form {
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     padding: 1rem;
-    margin-top: 1rem;
-    border: 1px solid #fff;
+    margin-top: 10rem;
+    background-color: rgb(43, 43, 43);
     width: 30rem;
 }
 
@@ -61,12 +76,13 @@ form span {
 #email {
     font-size: 1.25rem;
     margin: 1rem 0 1rem 0;
-    width: 20rem;
+    width: 25rem;
 }
 
 #submit {
-    font-size: 1.25rem;
-    width: 10rem;
+    font-size: 1.15rem;
+    padding-bottom: 0.25rem;
+    width: 8rem;
     background: black;
     color: #fff;
     border: 1px solid #fff;
@@ -78,4 +94,7 @@ form span {
     margin: 0 auto;
     margin-top: 3rem;
     border: 1px solid rgb(59, 59, 59);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
