@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+}
+
+li {
+    padding-right: 2rem;
+    display: inline;
+}
+
+.nav-link {
+    color: rgb(59, 59, 59);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#title-and-email {
+    background-image: url(https://emilyfabulous.com/wp-content/uploads/2020/01/bar-tools.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 60rem;
+    height: 40rem;
+    opacity: 0.9;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #fff;
+    width: 30rem;
+}
+
+form span {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+#email {
+    font-size: 1.25rem;
+    margin: 1rem 0 1rem 0;
+    width: 20rem;
+}
+
+#submit {
+    font-size: 1.25rem;
+    width: 10rem;
+    background: black;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.content-box {
+    width: 60rem;
+    height: 40rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border: 1px solid rgb(59, 59, 59);
+}
