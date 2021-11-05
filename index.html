@@ -5,14 +5,305 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> --> 
+    
+    <!--for some stupid reason, freecodecamp.org's test is not accepting required CSS property conditions that are *definitely* present.  It would not recognize the use of 'display: flex;', or that a media query was present.  Therefor, I just copypasted it into a <style> tag found below.-->
+
+    <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-family: "Zen Kaku Gothic Antique", sans-serif;
+                scroll-behavior: smooth;
+            }
+        
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+        
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 3rem;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                z-index: 100;
+                background: rgb(223, 223, 223);
+            }
+        
+            #header-img {
+                margin-left: 3rem;
+                margin-top: 0.15rem;
+                height: 90%;
+            }
+        
+            li {
+                padding-right: 2rem;
+                display: inline;
+            }
+        
+            .nav-link,
+            a {
+                color: rgb(59, 59, 59);
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+        
+            .nav-link:hover {
+                text-decoration: underline;
+            }
+        
+            #nav-bar {
+                line-height: 2.5rem;
+            }
+        
+            #title-and-email {
+                background-image: linear-gradient(to bottom,
+                        rgba(49, 49, 49, 0.1),
+                        rgba(48, 48, 48, 0.9)),
+                    url(https://emilyfabulous.com/wp-content/uploads/2020/01/bar-tools.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                width: 60rem;
+                height: 40rem;
+                margin: 0 auto;
+                margin-top: 5rem;
+            }
+        
+            h1,
+            h2 {
+                font-family: arvo;
+                font-size: 4.5rem;
+                color: #fff;
+                text-align: center;
+                background-color: rgb(43, 43, 43);
+            }
+        
+            h2 {
+                font-size: 3rem;
+                width: 100%;
+            }
+        
+            #form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                padding: 1rem;
+                margin-top: 10rem;
+                background-color: rgb(43, 43, 43);
+                width: 30rem;
+                border: 0.25rem solid #fff;
+            }
+        
+            form span {
+                font-size: 1.25rem;
+                color: #fff;
+            }
+        
+            #email {
+                font-size: 1.25rem;
+                margin: 1rem 0 1rem 0;
+                width: 25rem;
+            }
+        
+            #submit,
+            #place-order {
+                font-size: 1.15rem;
+                padding-bottom: 0.25rem;
+                width: 8rem;
+                background: rgb(11, 162, 207);
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 50px;
+            }
+        
+            #place-order {
+                width: 16rem;
+                margin-bottom: 1rem;
+            }
+        
+            .content-box {
+                width: 60rem;
+                height: 40rem;
+                margin: 0 auto;
+                margin-top: 3rem;
+                border: 1px solid rgb(59, 59, 59);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .content-box:last-child {
+                margin-bottom: 5rem;
+            }
+        
+            .vertical-organize {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .horizontal-organize {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .merch-img {
+                max-width: 100%;
+                height: auto;
+            }
+        
+            .product-description {
+                font-size: 1.25rem;
+                color: rgb(59, 59, 59);
+                padding: 1rem;
+            }
+        
+            .clothes-card {
+                width: 20rem;
+                height: 35rem;
+                margin: 0.5rem;
+                border: 1px solid rgb(59, 59, 59);
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+        
+            h3 {
+                width: 100%;
+                text-align: center;
+                font-size: 1.5rem;
+                color: #fff;
+                background-color: rgb(43, 43, 43);
+            }
+        
+            .card-footer {
+                text-align: center;
+                width: 100%;
+                height: 2rem;
+                background-color: rgb(43, 43, 43);
+            }
+        
+            .card-footer a {
+                font-size: 1.25rem;
+                color: #fff;
+            }
+        
+            .card-footer a:hover {
+                text-decoration: underline;
+            }
+        
+            .equipment-card-zone {
+                justify-content: space-around;
+            }
+        
+            .equipment-card {
+                height: 47%;
+                /* margin-top: 1rem; */
+                width: 58rem;
+                border: 1px solid rgb(59, 59, 59);
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+        
+            #tins-card {
+                background-image: linear-gradient(to bottom,
+                        rgba(124, 124, 124, 0.1),
+                        rgba(48, 48, 48, 0.9)),
+                    url(http://bizweb.dktcdn.net/thumb/1024x1024/100/291/272/products/tb24r2ab4hmpufjszfyxxcldfxa-659106058.jpg?v=1517140605087);
+                background-size: 125%;
+                background-position-y: 30%;
+                background-position-x: center;
+            }
+        
+            #tins-card p {
+                padding: 0 8rem;
+                text-align: justify;
+            }
+        
+            #strainers-card {
+                background-image: linear-gradient(to bottom,
+                        rgba(124, 124, 124, 0.1),
+                        rgba(48, 48, 48, 0.9)),
+                    url(https://ae01.alicdn.com/kf/HTB14iS7Gk9WBuNjSspeq6yz5VXao/Triangular-Cocktail-Strainer-Hawthorne-Strainer-Bartender-Bar-Tools.jpg);
+                background-position-y: 45%;
+                background-position-x: center;
+            }
+        
+            h4 {
+                font-family: arvo;
+                font-size: 1.75rem;
+                color: rgb(223, 223, 223);
+                text-align: center;
+                margin-top: 1.75rem;
+            }
+        
+            .light-text {
+                color: rgb(223, 223, 223);
+            }
+        
+            /* Media Queries */
+        
+            @media (max-width: 1000px) {
+                #header-img {
+                    margin-left: 0;
+                }
+        
+                #title-and-email {
+                    width: 100%;
+                    height: 20rem;
+                }
+        
+                #nav-link {
+                    font-size: 0.75rem;
+                }
+        
+                h1,
+                h2 {
+                    font-size: 3rem;
+                }
+        
+                #form {
+                    width: 80%;
+                    margin-top: 1rem;
+                }
+        
+                #email {
+                    width: 100%;
+                }
+        
+                .content-box {
+                    width: 100%;
+                }
+        
+                .product-description {
+                    font-size: 1rem;
+                }
+            }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Zen+Kaku+Gothic+Antique&display=swap"
     rel="stylesheet">
 
-    <title>Product Landing Page</title>
+    <title>Craft Mates | Landing Page</title>
+
 </head>
 <body>
     <header id="header">
@@ -20,15 +311,15 @@
         <nav id="nav-bar">
             <ul>
                 <li>
-                    <a class="nav-link" href="#bar-tools">Bar Tools</a>
+                    <a class="nav-link" href="#bar-tools-scrollto">Bar Tools</a>
                 </li>
 
                 <li>
-                    <a class="nav-link" href="#clothing">Clothing</a>
+                    <a class="nav-link" href="#clothing-scrollto">Clothing</a>
                 </li>
 
                 <li>
-                    <a class="nav-link" href="#custom-equipment">Custom Equipment</a>
+                    <a class="nav-link" href="#custom-equipment-scrollto">Custom Equipment</a>
                 </li>
             </ul>
         </nav>
@@ -46,6 +337,8 @@
             </form>
         </section>
 
+        <div id="bar-tools-scrollto"></div>  <!-- Bar Tools Scroll to point so that the header doesn't cover the h2 below -->
+
         <section id="bar-tools" class="content-box">
             <h2>Bar Tools</h2>
             <div class="vertical-organize">
@@ -53,7 +346,9 @@
             </div>
         </section>
 
-        <section id="clothing" class="content-box">
+        <div id="clothing-scrollto"></div>  <!-- Clothing Scroll to point so that the header doesn't cover the h2 below -->
+
+        <section id="clothing" class="content-box" style="display:flex;">
             <h2>Clothing</h2>
             <div class="horizontal-organize">
                 <div class="clothes-card">
@@ -102,8 +397,25 @@
             </div>
         </section>
 
+        <div id="custom-equipment-scrollto"></div>  <!-- Equipment Scroll to point so that the header doesn't cover the h2 below -->
+
         <section id="custom-equipment" class="content-box">
             <h2>Custom Equipment</h2>
+            <div class="vertical-organize equipment-card-zone">
+                <div id="tins-card" class="equipment-card">
+                    <h3>Tins</h3>
+                    <h4>100% Folded Japanese Stainless Steel</h4>
+                    <p class="product-description light-text">Here at <strong>Craft Mates</strong>, we know that you depend on your tin set to make tens of thousands of cocktails, and to move with your arms and body in the most ergonomic way possible.</p>
+                    <button id="place-order">Place a custom order!</button>
+                </div>
+                <div id="strainers-card" class="equipment-card">
+                    <h3>Strainers</h3>
+                    <h4>Meticulously engineered for optimal performance</h4>
+                    <p class="product-description light-text">Everyone enjoys a certain Hawthorne Strainer for certain reasons, and we are open to all of them.  Let us help you perform at your best with a custom designed strainer by <strong>Craft Mates</strong></p>
+                    <button id="place-order">Place a custom order!</button>
+                </div>
+            </div>
+            
         </section>
         
     </main>
