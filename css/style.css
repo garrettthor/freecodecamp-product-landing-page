@@ -33,7 +33,8 @@ li {
     display: inline;
 }
 
-.nav-link {
+.nav-link,
+a {
     color: rgb(59, 59, 59);
     font-size: 1.5rem;
     text-decoration: none;
@@ -120,6 +121,10 @@ form span {
     align-items: center;
 }
 
+.content-box:last-child {
+    margin-bottom: 5rem;
+}
+
 .vertical-organize {
     height: 100%;
     display: flex;
@@ -136,6 +141,17 @@ form span {
     justify-content: center;
 }
 
+.merch-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-description {
+    font-size: 1.25rem;
+    color: rgb(59, 59, 59);
+    padding: 1rem;
+}
+
 .clothes-card {
     width: 20rem;
     height: 35rem;
@@ -145,7 +161,7 @@ form span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: space-between;
 }
 
 h3 {
@@ -154,6 +170,22 @@ h3 {
     font-size: 1.5rem;
     color: #fff;
     background-color: rgb(43, 43, 43);
+}
+
+.card-footer {
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(43, 43, 43);
+}
+
+.card-footer a {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries */
